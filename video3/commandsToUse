@@ -1,0 +1,36 @@
+# commands to use:
+
+# this is for ARCH based systems, eg manjaro
+
+# this checks the status of the smb service (or daemon)
+systemctl status smb
+
+# this runs samba if it is not started
+systemctl start smb
+
+# this stops samba if it is not running
+systemctl stop smb
+
+# this autostarts samba everytime you logon
+systemctl enable smb
+
+# if you don't want to autostart, then use this command
+systemctl disable smb
+
+# if you want to start samba now and autostart on logon
+systemctl enable --now smb
+
+# find your ip address of the samba server
+ip a
+
+
+# dealing with permissions
+
+# give everybody read write and execute permissions
+chmod -R 777 (folderName)
+
+# changes ownership of the folder
+chown -R nobody:nobody (folderName)
+
+# show what groups the user is part of
+groups (username)
